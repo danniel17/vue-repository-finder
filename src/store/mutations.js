@@ -9,9 +9,9 @@ export default {
         state.repos = payload
     },
     'GET_REPO' (state, payload) {
-        state.user.repo = payload
+        state.repo = payload
     },
     'API_FAILURE'(){
-        
+        state.apiFailure = payload
     }
 }

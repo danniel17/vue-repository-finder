@@ -1,5 +1,9 @@
 export default {
-    user: {},
-    repos: [{}]
-    
+    user: {
+        "login":"",
+        "repos_url":""
+    },
+    repos: [],
+    repo:{},
+    apiFailure: ""
 }

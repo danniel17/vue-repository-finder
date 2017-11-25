@@ -1,0 +1,96 @@
+
+.search-bar-container {
+    margin:0;
+    // background-color: #424242;
+    width: 100%;
+    height: 60px;
+    grid-area: search-container;
+
+    .search-bar-input {
+        width:40%;
+        height: 70%;
+        input {
+            // background-color: #757575;
+            width: 70%;
+            // height   : 25px;
+            // color:#fafafa;
+        }
+        button{
+            // background-color: #757575; 
+            margin:0 auto;
+        }
+    }
+}
+
+.body-container{
+    position:absolute;
+    display: grid;
+    grid-template-areas:"user-container"
+                        "repo-container";
+    width: 100%;
+    height:calc(100% - 60px);
+    overflow: auto;
+
+    .user-details-container {
+        position: relative;
+        max-height: 100%;
+        grid-area: user-container;
+        
+        .user-details{
+        padding: 0 5px;
+        width: 70%;
+        height: 90%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        .user-details-img{
+           width: 100%;
+           max-height: 50%;
+           img{
+               width: 100%;
+               height:auto;
+           }
+        }
+        ul li{
+            font-size: 20px;
+        }
+
+        }
+    }
+
+    .repo-container{
+        margin:0 auto;
+        width: 100%;
+        max-height: 100%;
+        grid-area: repo-container;
+        .repo-list-container{
+            padding:0 10px;
+            width: 100%;
+            max-height: 100%;
+            ul{
+                margin:0;
+            }
+        }
+        .user-not-found {
+            position: relative;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 700px) {
+     .body-container{
+         grid-template-columns: 40% 60%;
+         grid-template-areas:"user-container repo-container";
+     }
+}

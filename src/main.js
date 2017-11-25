@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 import store from './store/store'
 import vueResource from 'vue-resource'
+import "materialize-loader"
 
 Vue.use(vueResource)
 Vue.config.productionTip = false
@@ -11,6 +12,6 @@ new Vue({
   store,
   el: '#app',
   router,
-  template: '<App/>',
+  render:h => h(App),
   components: { App }
 })
