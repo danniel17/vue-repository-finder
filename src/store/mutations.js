@@ -7,11 +7,5 @@ export default {
     },
     'GET_REPO' (state, payload) {
         state.repo = payload
-    },
-    'API_MESSAGE'(state, payload){
-        state.apiMessage = payload
-    },
-    'API_FAILURE'(){
-        state.apiFailure = payload
     }
 }

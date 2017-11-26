@@ -10,11 +10,10 @@ export default {
   },
 
   methods: {
-      ...mapActions(['getUser','getUserRepos']),
+      ...mapActions(['getUser']),
       getUsuario(){
           this.$router.push({ path:'/' })
           this.getUser(this.user_name)
-          
       },
   },
   computed: {
