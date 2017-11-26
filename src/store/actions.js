@@ -4,12 +4,7 @@ export default {
     // payload = user.login
     getUser(context, payload){
         Vue.http.get(`https://api.github.com/users/${payload}`)
-            .then((response) => {
-                if(response.message)
-                context.commit('API_MESSAGE', response.body)    
-                else
-                context.commit('GET_USER', response.body)
-            })
+            .then((response) =>   context.commit('GET_USER', response.body))
             .catch(((error) => context.commit('API_FAILURE',error)))
     },
 
