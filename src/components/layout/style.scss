@@ -1,0 +1,178 @@
+//  @import '~/node_modules/materialize-css/dist/css/materialize.min';
+
+ $primary-color: #bdbdbd;
+ $primary-color-lighter: #e0e0e0;
+*{
+    margin:0;
+    padding:0;
+}
+body{ background-color: #f5f5f5; }
+
+.body-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows:60px calc(100% - 60px);
+    grid-template-areas:
+    "search-container search-container"
+    "user-container repo-container";
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .search-bar-container {
+        width: 100%;
+        height: 60px;
+        grid-area: search-container;
+        padding:5px;
+        background-color: #212121; 
+        z-index:3;
+        .search-bar-input {
+            width:100%;
+            height: 60%;
+            input {
+                padding-left: 5px; 
+                color:white;
+                width: 50%;
+                background-color:#616161;
+            }
+            input:focus{
+                border-bottom: 1px solid white;
+            }
+            input:hover{
+                border-bottom: 1px solid white;
+            }
+            button:hover{
+                background-color:$primary-color-lighter;
+            }
+        }
+    }
+    
+    .user-details-container {
+        grid-area: user-container;
+        justify-self: start;
+        background-color: $primary-color-lighter; 
+        width:100%;
+        z-index:2;
+        display: grid;
+
+        .user-details{
+            width: 100%;
+            height: 100%;
+            .user-details-img{
+                margin:10% 20%;
+                width: 60%;
+                height: auto;
+
+            }
+            .user-details-content{
+                margin:0 0;
+                padding: 5%;
+                width: 100%;
+                height: auto;
+            }
+
+        }
+    }
+
+    .repo-container{
+        grid-area: repo-container;
+        justify-self: end;
+        background-color: #f5f5f5;
+        width: 100%;
+        .repo-list-container{   
+            height: 100%;
+            width: 100%;
+            overflow:auto;
+            .repo-list{
+                padding:20px;
+                justify-self: center;
+            }
+
+        }
+    }
+    .repo-details-container{
+        padding:50px;
+        a{
+            width: 100%;
+            justify-self: center;
+        }
+    }
+
+    .has-not-user-container{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        padding:20px;
+        
+    }
+}
+
+
+
+@media only screen and (min-width: 700px) {
+    //  .body-container{
+    //      grid-template-columns: 40% 1fr;
+    //      grid-template-areas:"user-container repo-container";
+    //  }
+}
+
+@media only screen and (max-width:700px){
+    .body-container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:auto auto auto;
+        grid-template-areas:
+        "search-container"
+        "user-container"
+        "repo-container";
+        
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+        .search-bar-container{
+            width: 100%;
+            .search-bar-input{
+                float:left;
+                width: 100%;
+                input{
+                    width:60%;
+                }
+                button{
+                    padding:0;
+                    width:20%;
+                    height: auto;
+                    font-size: 11px;
+                }
+            }
+        }
+
+
+        .user-details-container{
+            padding: 10px;
+            .user-details-img{
+                margin: 10px;
+            }
+        }
+        .repo-container{
+
+            width: 100%;
+            margin:0 auto;
+            padding:0px;
+            .repo-list{
+                width: 100%;
+                margin:0 auto;
+                padding:0px !important;
+            }
+        }
+     }
+}
+
+
+
+
+
+
+

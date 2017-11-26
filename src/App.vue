@@ -1,5 +1,5 @@
 <script>
-import layout from './components/layout'
+import layout from './components/layout/layout'
 
 export default {
   components: {
@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<template class="aps">
+<template>
     <layout></layout>
 </template>
 

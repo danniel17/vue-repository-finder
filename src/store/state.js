@@ -5,5 +5,6 @@ export default {
     },
     repos: [],
     repo:{},
+    apiMessage:"",
     apiFailure: ""
 }

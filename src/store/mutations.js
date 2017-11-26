@@ -1,7 +1,4 @@
 export default {
-    //'CHANGE_USER' (state, payload){
-    //    state.user = payload
-    //},
     'GET_USER' (state, payload) {
         state.user = payload
     },
@@ -10,6 +7,9 @@ export default {
     },
     'GET_REPO' (state, payload) {
         state.repo = payload
+    },
+    'API_MESSAGE'(state, payload){
+        state.apiMessage = payload
     },
     'API_FAILURE'(){
         state.apiFailure = payload

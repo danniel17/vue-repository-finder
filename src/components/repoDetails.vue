@@ -19,14 +19,14 @@ export default {
 
 
 <template>
-  <div>
-      <label>Nome:</label> <br>
-      {{repo.name}} <br>
+  <div class="repo-details-container">
+      <h2 align="center">{{repo.name}}</h2> 
+      <hr>
       <label>Descricao:</label> <br>
       {{repo.description}} <br>
       <label>Linguagem principal:</label> <br>
       {{repo.language}} <br>
-      <a :href="repo.html_url">Conferir Repositorio no Github</a>
+      <a :href="repo.html_url" class="btn blue">Conferir Repositorio no Github</a>
   </div>
 </template>
 
