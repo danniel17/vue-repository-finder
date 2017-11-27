@@ -8,9 +8,10 @@ export default {
           (state,getters) => {
                 if(getters.hasUser){
                      this.$store.dispatch('getUserRepos',state.user.repos_url)
-                     //this.sortByStar()
+                     
                 }
           })
+    console.log('created')
   },
   
   computed:{
@@ -19,9 +20,7 @@ export default {
       }),
       ...mapGetters(['hasUser'])
   },
-  mounted(){
-      
-  },
+  
   methods: {
       sortByStar(){
           this.repos.sort(function(a, b){return b.stargazers_count - a.stargazers_count })
