@@ -2,7 +2,7 @@
 
 > Desafio proposto pela pet Nativa
 
-<img src="~/vue-repository-finder" />
+<img src="./vue-repository-finder.png" />
 
 <p>
 Aplicação client-side que busca, por meio de uma API, os repositórios mais populares de um determinado usuário no github.
