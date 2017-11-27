@@ -7,16 +7,20 @@ export default {
       this.$store.watch(
           (state,getters) => {
                 if(getters.hasUser){
-                    this.$store.dispatch('getUserRepos',state.user.repos_url)
-                    this.sortByStar()
+                     this.$store.dispatch('getUserRepos',state.user.repos_url)
+                     //this.sortByStar()
                 }
           })
   },
+  
   computed:{
       ...mapState({
           repos: state => { return state.repos },
       }),
       ...mapGetters(['hasUser'])
+  },
+  mounted(){
+      
   },
   methods: {
       sortByStar(){
@@ -45,7 +49,7 @@ export default {
                             <h6 align="center">Repositórios:</h6>
                             <br>
                             <label>ordernar-por:</label>
-                            <select class="btn btn-flat" style="width:30%;">
+                            <select class="btn btn-flat">
                               <option disabled selected>Escolha uma opçao</option>
                               <option @click="sortByStar">N°estrelas</option>
                               <option @click="sortByStarReverse">N°estrelas(cresc.)</option>

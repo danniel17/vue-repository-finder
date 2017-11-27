@@ -5,11 +5,6 @@ import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
   name:'layout',
-  data(){
-    return {
-      message:''
-    }
-  },
   components: {
     searchBar,
     userDetails
