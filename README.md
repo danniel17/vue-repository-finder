@@ -1,6 +1,5 @@
 # front-end-challenge
 
-> Desafio proposto pela pet Nativa
 
 <img src="./vue-repository-finder.png" />
 
